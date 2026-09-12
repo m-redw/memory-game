@@ -11,8 +11,8 @@
 @font-face {
   font-family: "Pokemon Solid";
   src:
-    url("./Font/PokemonSolidNormal.woff2") format("woff2"),
-    url("./Font/PokemonSolidNormal.woff") format("woff");
+    url("/Font/PokemonSolidNormal.woff2") format("woff2"),
+    url("/Font/PokemonSolidNormal.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -29,7 +29,7 @@ body {
   flex-direction: column;
   align-items: center;
 
-  background-image: url("background.jpg");
+  background-image: url("/background.jpg");
   background-size: cover;
 }
 
