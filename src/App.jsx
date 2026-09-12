@@ -36,10 +36,37 @@ function App() {
 
   return (
     <div>
-      <h1>Don't Click the Ditto!</h1>
-      <h2>
-        Score: {scores.score} | High-Score: {scores.highScore}
-      </h2>
+      <div className="copy-container">
+        <h1>Don't Click the Ditto!</h1>
+        <h1 className="copy">Don't Click the Ditto!</h1>
+      </div>
+      <div className="copy-container">
+        <p>How to Play:</p>
+        <p className="copy">How to Play:</p>
+      </div>
+      <div className="copy-container">
+        <p>
+          Click on any Pokemon. If you clicked a Pokemon you already clicked
+          before, that means you just clicked on Ditto! This is a memorization
+          game. Remember the cards you already clicked, click on new cards to
+          increase your score!
+        </p>
+        <p className="copy">
+          Click on any Pokemon. If you clicked a Pokemon you already clicked
+          before, that means you just clicked on Ditto! This is a memorization
+          game. Remember the cards you already clicked, click on new cards to
+          increase your score!
+        </p>
+      </div>
+      <div className="copy-container">
+        <h2>
+          Score: {scores.score} | High-Score: {scores.highScore}
+        </h2>
+        <h2 className="copy">
+          Score: {scores.score} | High-Score: {scores.highScore}
+        </h2>
+      </div>
+
       <div className="card-container">
         {list.map((pokemon) => (
           <Card

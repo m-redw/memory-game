@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Pokemon Hollow";
+  src:
+    url("./Font/PokemonHollowNormal.woff2") format("woff2"),
+    url("./Font/PokemonHollowNormal.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pokemon Solid";
+  src:
+    url("./Font/PokemonSolidNormal.woff2") format("woff2"),
+    url("./Font/PokemonSolidNormal.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  font-family: "Pokemon Solid", serif;
+  color: #e4bffd;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: url("background.jpg");
+  background-size: cover;
+}
+
+.card {
+  width: 200px;
+  height: 250px;
+
+  background-color: #d6e8fd;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px #cc00ff;
+}
+
+.card img {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  max-width: 900px;
+}
+
+h3 {
+  margin: 12px 0 0;
+  font-size: 24px;
+}
+
+.copy {
+  font-family: "Pokemon Hollow", serif;
+  color: black;
+  font-weight: bold;
+}
+
+.copy-container {
+  display: grid;
+}
+
+.copy-container > * {
+  grid-area: 1/1;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  color: #ffe988;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #ffe5b6;
+  max-width: 800px;
+}

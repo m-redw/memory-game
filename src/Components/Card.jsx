@@ -10,9 +10,12 @@ export function Card({ name, onClick }) {
   });
 
   return (
-    <button onClick={onClick}>
-      <img src={imgSrc} />
-      <h3>{name}</h3>
+    <button onClick={onClick} className="card">
+      <img src={imgSrc} width="150" />
+      <div className="copy-container">
+        <h3>{name}</h3>
+        <h3 className="copy">{name}</h3>
+      </div>
     </button>
   );
 }
