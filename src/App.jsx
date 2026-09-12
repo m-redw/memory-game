@@ -12,16 +12,24 @@ function App() {
   const [clicked, setClicked] = useState([]);
   const [scores, setScores] = useState({ score: 0, highScore: 0 });
 
+  function resetGame() {
+    setScores({ ...scores, score: 0 });
+    setClicked([]);
+  }
+
+  function increaseScores() {
+    const newScore = scores.score + 1;
+    const highScore = scores.highScore;
+    const bestScore = newScore > highScore ? newScore : highScore;
+    setScores({ score: newScore, highScore: bestScore });
+  }
+
   function cardClick(pokemon) {
     setList(shuffle(names));
     if (clicked.includes(pokemon)) {
-      setScores({ ...scores, score: 0 });
-      setClicked([]);
+      resetGame();
     } else {
-      const newScore = scores.score + 1;
-      const highScore = scores.highScore;
-      const bestScore = newScore > highScore ? newScore : highScore;
-      setScores({ score: newScore, highScore: bestScore });
+      increaseScores();
       setClicked([...clicked, pokemon]);
     }
   }
