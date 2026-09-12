@@ -3,8 +3,7 @@ import { Pokedex } from "https://cdn.jsdelivr.net/gh/pokeapi/pokeapi-js-wrapper@
 const pokedex = await Pokedex.init();
 
 export function Card({ name, onClick }) {
-  const [clicked, setClicked] = useState(false);
-  const [imgSrc, setImgSrc] = useState("");
+  const [imgSrc, setImgSrc] = useState(null);
 
   pokedex.getPokemonByName(name).then((pokemon) => {
     setImgSrc(pokemon.sprites.front_default);
